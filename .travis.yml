@@ -1,0 +1,17 @@
+language: python
+
+
+script:
+  - python hello.py
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: 
+    secure: "$ACCESS_ID"
+  secret_access_key:
+    secure: "$SECRET_ACCESS_KEY"
+  region: "us-east-1"  
+  app: "mypyapp"
+  env: "Mypyapp-env"
+  bucket_name: "elasticbeanstalk-us-east-1-195396465747"
+
